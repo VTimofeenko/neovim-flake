@@ -1,13 +1,13 @@
-{
-  pkgs,
-  config,
-  lib,
-  ...
+{ pkgs
+, config
+, lib
+, ...
 }:
 with lib;
 with builtins; let
   cfg = config.vim.lsp;
-in {
+in
+{
   options.vim.lsp = {
     enable = mkEnableOption "neovim lsp support";
     formatOnSave = mkEnableOption "Format on save";
@@ -31,7 +31,6 @@ in {
     sql = mkEnableOption "SQL Language LSP";
     go = mkEnableOption "Go language LSP";
     ts = mkEnableOption "TS language LSP";
-    hare = mkEnableOption "Hare plugin (not LSP)";
   };
 
   config = mkIf cfg.enable (
@@ -40,7 +39,8 @@ in {
         if cond
         then msg
         else "";
-    in {
+    in
+    {
       vim.startPlugins = with pkgs.neovimPlugins;
         [
           nvim-lspconfig
@@ -61,13 +61,8 @@ in {
           then [
             crates-nvim
             rust-tools
-            (
-              if cfg.hare
-              then hare-vim
-              else null
-            )
           ]
-          else []
+          else [ ]
         );
 
       vim.configRC = ''
