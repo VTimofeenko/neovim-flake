@@ -1,10 +1,10 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
+{ config
+, lib
+, pkgs
+, ...
 }: {
   imports = [
+    ./comments
     ./completion
     ./theme
     ./core

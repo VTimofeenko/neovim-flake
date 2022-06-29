@@ -222,7 +222,7 @@
 
       # Plugin must be same as input name
       plugins = [
-        "kommentary"
+        "todo-comments"
         "nvim-treesitter-context"
         "gitsigns-nvim"
         "plenary-nvim"
