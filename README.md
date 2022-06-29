@@ -1,3 +1,11 @@
+# Fork differences
+
+* Removed hare
+* Bumped dependencies
+* Updated nvim-tree config to match upstream (7509dd66)
+
+---
+
 # neovim-flake
 
 Nix flake for neovim with configuration options
