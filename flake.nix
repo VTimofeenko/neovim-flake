@@ -395,6 +395,7 @@
               enable = true;
               gitsigns.enable = true;
             };
+            vim.mouseSupport = "c";
           };
         };
       };
