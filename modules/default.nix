@@ -5,6 +5,7 @@
 }: {
   imports = [
     ./comments
+    ./orgmode
     ./completion
     ./theme
     ./core

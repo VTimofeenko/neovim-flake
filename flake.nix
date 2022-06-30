@@ -7,6 +7,11 @@
       url = "github:nix-community/neovim-nightly-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # Orgmode
+    nvim-orgmode = {
+      url = "github:nvim-orgmode/orgmode";
+      flake = false;
+    };
 
     # LSP plugins
     nvim-lspconfig = {
@@ -226,6 +231,7 @@
         "nvim-treesitter-context"
         "gitsigns-nvim"
         "plenary-nvim"
+        "nvim-orgmode"
         "nvim-lspconfig"
         "nvim-treesitter"
         "lspsaga"
