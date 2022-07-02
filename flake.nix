@@ -371,8 +371,8 @@
             };
             vim.theme = {
               enable = true;
-              name = "onedark";
-              style = "darker";
+              name = "tokyonight";
+              style = "night";
             };
             vim.autopairs.enable = true;
             vim.autocomplete = {
